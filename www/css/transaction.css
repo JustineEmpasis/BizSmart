@@ -1,0 +1,178 @@
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#222831;
+    color: white;
+    /* background-image:linear-gradient(to bottom, #A7A7A7 0%, #E4E4E4 51%); */
+    font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+    font-size:12px;
+    height:100vh;
+    margin:0px;
+    padding:0px;
+    /* Padding to avoid the "unsafe" areas behind notches in the screen */
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+    text-transform:uppercase;
+    width:100%;
+    overflow: hidden;
+    position: fixed;
+}
+
+.header {
+    width: 95%;
+    margin: 5px;
+}
+
+.header > label {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.header .back {
+    font-size: 30px;
+    position: absolute;
+    color: #565656;
+    left: 3%;
+    top: 1%;
+    padding: 10px 50px 5px 20px;
+    border-radius: 25px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.header .back > button {
+    display: inline-block;
+    background-color: transparent;
+    border-radius: 50px;
+    border: none;
+}
+
+.header .back > button > img {
+    width: 30px;
+}
+
+.header .back:hover {
+    color: #00ADB5;
+}
+
+/* SEARCH */
+
+.search .search-bar {
+    margin-top: 5%;
+    padding: 10px 80px 10px 20px;
+    font-size: 20px;
+    border-radius: 25px;
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #393E46;
+    border: none;
+    color: white;
+}
+
+.search .search-logo {
+    width: 30px;
+    border-radius: 25px;
+}
+
+.search .search-btn {
+    border: none;
+    margin-top: 4px;
+    margin-left: 310px;
+    background-color: transparent;
+    position: absolute;
+    width: 70px;
+    border-radius: 25px;
+}
+
+
+/* CATEGORIES */
+
+.categories {
+    margin-top: 20px;
+    padding: 20px 30px;
+    display: flex;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 60%;
+    max-width: 100%;
+}
+
+.categories .category .category-title {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.categories .category .category-content {
+    background-color: #2c3036;
+    margin-top: 5px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    min-width: 28%;
+    max-width: 28%;
+    min-height: 10%;
+
+}
+
+.categories .category .category-content .category-list {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0px;
+    font-weight: bold;
+}
+
+.categories .category .category-content .category-list > ul {
+    list-style: none;
+    list-style-position: inside;
+    padding-left: 0;
+    min-width: 20%;
+    display: flex;
+
+}
+
+.categories .category .category-content .category-list > ul > li {
+    padding: 5px 20px;
+    margin-left: 10px;
+    background-color: #00ADB5;
+    text-align: center;
+    border-radius: 25px;
+    font-size: 15px;
+    white-space: nowrap;
+    vertical-align: center;
+}
+
+.categories .category .category-content .category-list > ul > li.oos-queue {
+    background-color: #565656;
+}
+
+/* CREATE TRANSACTION BAR */
+
+.create-transaction {
+    border: none;
+}
+
+.create-transaction form > button {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    left: 10%;
+    border: none;
+    position:absolute;
+    top: 90%;
+    width: 80%;
+    height: 40px;
+    background-color: #565656;
+    padding: 0px;
+    border-radius: 25px;
+    z-index: 99;
+}
+
+.create-transaction form > button.active {
+    background-color: #00ADB5;
+}

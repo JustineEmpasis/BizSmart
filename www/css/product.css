@@ -1,0 +1,155 @@
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#222831;
+    color: white;
+    /* background-image:linear-gradient(to bottom, #A7A7A7 0%, #E4E4E4 51%); */
+    font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+    font-size:12px;
+    height:100vh;
+    margin:0px;
+    padding:0px;
+    /* Padding to avoid the "unsafe" areas behind notches in the screen */
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+    text-transform:uppercase;
+    width:100%;
+    overflow: hidden;
+    position: fixed;
+}
+
+.header {
+    width: 95%;
+    margin: 5px;
+}
+
+.header > label {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.header .back {
+    font-size: 30px;
+    position: absolute;
+    color: #565656;
+    left: 10px;
+    top: 10px;
+    padding: 10px 50px 5px 20px;
+    border-radius: 25px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.header .back > button {
+    display: inline-block;
+    background-color: transparent;
+    border-radius: 50px;
+    border: none;
+}
+
+.header .back > button > img {
+    width: 30px;
+}
+
+.header .back:hover {
+    color: #00ADB5;
+}
+
+/* CONTENT */
+
+.content {
+    overflow-y: auto;
+    display: flex;
+    max-height: 75%;
+    margin-top: 30px;
+}
+
+
+.content > ul {
+    margin: 0px auto 0px auto;
+    list-style: none;
+    list-style-position: inside;
+    padding-left: 0;
+    width: 100%;
+}
+
+.content > ul > a > li {
+    font-size: 20px;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin: 10px auto 0px auto;
+    width: 75%;
+    background-color: #393E46;
+    transition: 0.3s;
+}
+
+.content > ul a > li:hover {
+    background-color: #00ADB5;
+}
+
+/* ADD CUSTOMER */
+
+.add-customer-bar {
+    font-size: 30px;
+    font-weight: bold;
+    background-color: white;
+    color: #00ADB5;
+    border-radius: 50px;
+    padding: 15px 25px 15px 25px;
+    margin: 0px;
+    width: 3.5%;
+    position: absolute;
+    top: 87%;
+    left: 80%;
+    z-index: 100;
+    transition: 0.3s;
+}
+
+.add-customer-bar:hover {
+    background-color: #00FFF5;
+    color: white;
+}
+
+.add-customer-bar-link {
+    text-decoration: none;
+}
+
+.add-customer-bar-link:hover {
+    color: white;
+}
+
+/* SEARCH BAR */
+
+.search .search-bar {
+    margin-top: 10%;
+    padding: 10px 80px 10px 20px;
+    font-size: 20px;
+    border-radius: 25px;
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #393E46;
+    border: none;
+    color: white;
+}
+
+.search .search-logo {
+    width: 30px;
+    border-radius: 25px;
+}
+
+.search .search-btn {
+    border: none;
+    margin-top: 4px;
+    margin-left: 310px;
+    background-color: transparent;
+    position: absolute;
+    width: 70px;
+    border-radius: 25px;
+}

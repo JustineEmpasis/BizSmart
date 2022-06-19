@@ -1,0 +1,330 @@
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#222831;
+    color: white;
+    /* background-image:linear-gradient(to bottom, #A7A7A7 0%, #E4E4E4 51%); */
+    font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+    font-size:12px;
+    height:100vh;
+    margin:0px;
+    padding:0px;
+    /* Padding to avoid the "unsafe" areas behind notches in the screen */
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+    text-transform:uppercase;
+    width:100%;
+    overflow: hidden;
+    position: fixed;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* TAB BAR */
+
+.tabs {
+    position:absolute;
+    top: 90%;
+    width: 100%;
+    height: 70px;
+    background-color: #00ADB5;
+    padding: 0px;
+    overflow: hidden;
+    border-radius: 25px 25px 0 0;
+    z-index: 99;
+}
+
+.tabs .tab-header {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+
+}
+
+.tabs .tab-header > div {
+    width: calc(100% / 3);
+    text-align: center;
+    color: #222831;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.tabs .tab-header > div > i {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.tabs .tab-header > div.active {
+    color: white;
+}
+
+.tabs .tab-indicator {
+    position: relative;
+    width: calc(100% / 3);
+    height: 5px;
+    background-color: white;
+    left: 0px;
+    border-radius: 5px;
+    transition: all 500ms ease-in-out
+}
+
+.tab-body {
+    position: relative;
+    height: calc(100% - 60px);
+    padding: 5px 0;
+}
+
+.tab-body > .content {
+    position: absolute;
+    top: -500%;
+    transform: scale(0.9);
+    opacity: 0;
+    margin-top: 5px;
+    transition: opacity 500ms ease-in-out 0ms, transform 500ms ease-in-out 0ms;
+}
+
+
+.tab-body > .active {
+    opacity: 1;
+    top: 0px;
+    transform: scale(1);
+    top: 0px;
+    margin-top: 0px;
+}
+
+/* HEADER */
+
+.header {
+    width: 95%;
+    margin: 5px;
+}
+
+.header > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+}
+
+/* FILTER DIVISION */
+
+.tab-body .active .filter {
+    width: 90%;
+    margin: 10px 0px 5px 20px;
+
+}
+
+.tab-body .active .filter > h1 {
+    margin: 0px 10px 0px 0px;
+    font-size: 18px;
+    display: inline-block;
+
+}
+
+.tab-body .active .filter > div {
+    display: inline-block;
+    border-radius: 25px;
+    background-color: #393E46;
+    padding: 4px 15px;
+    margin-left: 5px;
+    transition: 0.3s;
+}
+
+.tab-body .active .filter > div.active-date {
+    background-color: #00ADB5;
+}
+
+/* ALL PRODUCTS */
+
+.tab-body .active .products > ul {
+    list-style-position: inside;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    max-width: 410px;
+    overflow-x: auto;
+}
+
+.tab-body .active .products > ul::-webkit-scrollbar {
+    width: 0;
+}
+
+.tab-body .active .products > ul > li {
+    text-align: center;
+    min-width: 110px;
+    border-radius: 25px;
+    padding: 4px 10px;
+    background-color: #393E46;
+    font-weight: bold;
+    margin-right: 5px;
+    transition: 0.3s;
+}
+
+.tab-body .active .products > ul > li.active-product {
+    background-color: #00ADB5;
+}
+
+/* PROFIT */
+
+.tab-body .active .profit {
+    border-radius: 25px;
+    background-color: #00ADB5;
+    margin: 20px 0px 0px 20px;
+    text-align: center;
+    position: relative;
+    width: 90%;
+    height: 160px;
+}
+
+.tab-body .active .profit > h1 {
+    font-size: 40px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.tab-body .active .profit > h4 {
+    font-size: 15px;
+    padding: 10px 0 0 0;
+    margin: 0px;
+}
+
+/* PROFIT > SUBCATEGORY */
+
+.tab-body .active .profit .subcategory {
+    background-color: #005e63;
+    border-radius: 15px;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 15px;
+}
+
+.tab-body .active .profit .subcategory > div {
+    display: inline-block;
+    width: 49%;
+    margin-bottom: 10px;
+}
+
+.tab-body .active .profit .subcategory > div > h1 {
+    font-size: 20px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.tab-body .active .profit .subcategory > div > h4 {
+    font-size: 10px;
+    padding: 10px 0 0 0;
+    margin: 0px;
+}
+
+/* OTHER INFO */
+
+.tab-body .active .other {
+    font-size: 15px;
+    padding-top: 20px;
+}
+
+.tab-body .active .other .other-title-one {
+    padding-left: 20px;
+}
+
+.tab-body .active .other .other-title-two {
+    color: #00ADB5;
+}
+
+.tab-body .active .other .row {
+    display: flex;
+    overflow-x: auto;
+    max-width: 410px;
+    margin-top: 10px;
+}
+
+.tab-body .active .other .row > div {
+    min-width: 20%;
+    border-radius: 15px;
+    padding: 10px;
+    margin-left: 10px;
+    background-color: #393E46;
+}
+
+.tab-body .active .other .row::-webkit-scrollbar {
+    width: 0;
+}
+
+.tab-body .active .other .row > div > h1 {
+    font-size: 20px;
+}
+
+.tab-body .active .other .row > div > h4 {
+    font-size: 10px;
+    text-align: center;
+}
+
+
+
+
+/* SECOND PAGE */
+
+.tab-body .active .content-selection {
+    margin-top: 50px;
+    width: 410px;
+}
+
+.tab-body .active .content-selection > ul {
+    list-style: none;
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.tab-body .active .content-selection > ul a > li {
+    font-size: 20px;
+    border-radius: 25px;
+    padding: 10px 10px 10px 30px;
+    margin: 10px 0px 0px 30px;
+    width: 75%;
+    background-color: #393E46;
+    transition: 0.3s;
+}
+
+.tab-body .active .content-selection > ul a > li:hover {
+    background-color: #00ADB5;
+}
+
+
+/* ADD TRANSACTION */
+
+.add-transaction-bar {
+    font-size: 30px;
+    font-weight: bold;
+    background-color: white;
+    color: #00ADB5;
+    border-radius: 50px;
+    padding: 15px 25px 15px 25px;
+    margin: 0px;
+    width: 3.5%;
+    position: absolute;
+    top: 87%;
+    left: 70%;
+    z-index: 100;
+    transition: 0.3s;
+}
+
+.add-transaction-bar:hover {
+    background-color: #00FFF5;
+    color: white;
+}
+
+.add-transaction-bar-link {
+    text-decoration: none;
+}
+
+.add-transaction-bar-link:hover {
+    color: white;
+}

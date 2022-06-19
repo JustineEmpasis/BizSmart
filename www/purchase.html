@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+        <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+        <link rel="stylesheet" href="css/purchase.css">
+        <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    </head>
+    <body>
+        <section class="header">
+            <a href="transaction.html"><div class="back"><</div></a>
+            <label>PURCHASE</label>
+            <button><img src="img/x.png" alt="" class="cancel"></button>
+            <button><img src="img/check.png" alt="" class="complete"></button>
+        </section>
+
+        <section class="information">
+            <form action="POST" class="payment-form">
+                <label for="payment-bar" class="information-label">Payment Method</label>
+                <div class="payment-bar">
+                    <ul>
+                        <li class="active">Cash</li>
+                        <li>Credit</li>
+                    </ul>
+                </div>
+                <div class="customer-name-bar">
+                    <label for="customer-name" class="information-label">Customer Name</label>
+                    <input type="text" placeholder="..." class="customer-name">
+                </div>
+
+                <div class="customer-money-bar">
+                    <label for="customer-money" class="information-label">Customer Cash</label>
+                    <input type="number" placeholder="..." class="customer-money">
+                </div>
+            </form>
+
+        </section>
+
+        <section class="ordered-products">
+            <label for="ordered-products-bar" class="ordered-products-label">Ordered Products</label>
+            <nav class="ordered-products-bar">
+                <ul>
+                    <li>
+                        <table>
+                            <h1>Red Horse</h1>
+                            <tr>
+                                <th>Price</th>
+                                <td>105</td>
+                            </tr>
+                            <tr>
+                                <th>Quantity</th>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <th>Discount</th>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <th>TOTAL</th>
+                                <td>210</td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li>
+                        <table>
+                            <h1>Piattos L</h1>
+                            <tr>
+                                <th>Price</th>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <th>Quantity</th>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <th>Discount</th>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <th>TOTAL</th>
+                                <td>60</td>
+                            </tr>
+                        </table>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <section class="result">
+            <table>
+                <tr>
+                    <th>CHANGE</th>
+                    <th>PAYMENT</th>
+                </tr>
+                <tr>
+                    <td class="change-data">175</td>
+                    <td class="payment-data">325</td>
+                </tr>
+            </table>
+        </section>
+    </body>
+    <script src="js/purchase.js"></script>
+</html>
